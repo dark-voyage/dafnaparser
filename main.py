@@ -43,8 +43,8 @@ for i in range(len(products)):
             products[i]['category_ids'].append(j['id'])
 import os
 
-if not os.path.exists('/output'):
-    os.makedirs('/output')
+if not os.path.exists('output'):
+    os.makedirs('output')
 json_object = json.dumps(products, indent=4)
 with open("output/products_parsed.json", "w") as outfile:
     outfile.write(json_object)
